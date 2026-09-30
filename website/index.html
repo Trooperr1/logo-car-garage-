@@ -1,0 +1,590 @@
+<title>Garage Ahmeti Mécanique</title>
+<meta name="description" content="Garage Ahmeti Mécanique — entretien, diagnostic et réparation toutes marques en Suisse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: dark showroom — asymmetric hero (copy left, line-art emblem right), then a quiet
+   vertical rhythm of wide sections separated by hairlines, like walking past cars on a floor. */
+:root {
+  --ink: #0B0B0C;
+  --panel: #141416;
+  --panel-2: #1B1B1E;
+  --line: rgba(244, 244, 242, 0.13);
+  --fg: #F4F4F2;
+  --muted: #B3B3B8;
+  --red: #C8102E;
+  --red-hi: #E3223F;
+  --display: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+  --sans: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  --gutter: clamp(18px, 5vw, 64px);
+  --max: 1200px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--red-hi); outline-offset: 3px; }
+.wrap { max-width: var(--max); margin: 0 auto; padding-inline: var(--gutter); }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: rgba(11, 11, 12, 0.86);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 14px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand svg { width: 58px; height: auto; color: var(--fg); flex: none; }
+.brand-name { font-weight: 500; letter-spacing: 0.32em; font-size: 20px; line-height: 1; }
+.brand-sub { display: block; font-size: 10px; letter-spacing: 0.3em; color: var(--muted); margin-top: 6px; font-weight: 400; }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { white-space: nowrap; text-decoration: none; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); transition: color .2s; }
+.nav-links a:hover { color: var(--fg); }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.lang { display: flex; border: 1px solid var(--line); }
+.lang button {
+  background: none; border: 0; color: var(--muted); font: 500 12px var(--sans); letter-spacing: 0.12em;
+  padding: 9px 11px; cursor: pointer;
+}
+.lang button[aria-pressed="true"] { background: var(--fg); color: var(--ink); }
+
+/* ---------- Buttons ---------- */
+.btn {
+  white-space: nowrap;
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  font: 600 14px var(--sans); letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none;
+  padding: 18px 30px; border: 1px solid var(--fg); color: var(--fg); background: transparent;
+  cursor: pointer; transition: background .25s, color .25s, border-color .25s;
+}
+.btn:hover { background: var(--fg); color: var(--ink); }
+.btn-red { background: var(--red); border-color: var(--red); color: #fff; }
+.btn-red:hover { background: var(--red-hi); border-color: var(--red-hi); color: #fff; }
+.btn-sm { padding: 12px 18px; font-size: 12px; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; border-bottom: 1px solid var(--line); overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(60% 70% at 78% 40%, rgba(244,244,242,0.06), transparent 70%);
+}
+.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; padding-block: clamp(56px, 9vw, 120px); position: relative; }
+.eyebrow { display: flex; align-items: center; gap: 14px; font-size: 13px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--muted); margin: 0 0 28px; }
+.plus { width: 12px; height: 12px; flex: none; }
+.hero h1 {
+  font-family: var(--display); font-weight: 500; font-size: clamp(46px, 6.6vw, 92px); line-height: 1.02;
+  letter-spacing: -0.01em; margin: 0 0 28px; text-wrap: balance;
+}
+.hero h1 em { font-style: italic; color: var(--muted); }
+.hero p.lead { font-size: clamp(18px, 1.6vw, 21px); color: var(--muted); max-width: 34em; margin: 0 0 40px; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 14px; }
+.emblem { width: 100%; max-width: 560px; justify-self: end; color: var(--fg); }
+.emblem svg { width: 100%; height: auto; display: block; }
+.emblem .star { animation: twinkle 4.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.emblem .star:nth-child(2) { animation-delay: .6s } .emblem .star:nth-child(3) { animation-delay: 1.2s }
+.emblem .star:nth-child(4) { animation-delay: 1.8s } .emblem .star:nth-child(5) { animation-delay: 2.4s }
+.emblem .star:nth-child(6) { animation-delay: 3s }
+@keyframes twinkle { 0%, 100% { opacity: 1 } 50% { opacity: .45 } }
+.emblem .car { animation: arrive 1.4s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes arrive { from { transform: translateX(-26px); } to { transform: none; } }
+
+.promise { border-top: 1px solid var(--line); position: relative; }
+.promise-list { list-style: none; margin: 0 auto; max-width: var(--max); padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); }
+.promise li { padding: 28px var(--gutter); display: flex; gap: 16px; align-items: baseline; min-width: 0; }
+.promise li + li { border-left: 1px solid var(--line); }
+.promise strong { font-weight: 600; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; }
+.promise span { color: var(--muted); font-size: 16px; display: block; }
+
+/* ---------- Sections ---------- */
+section.block { padding-block: clamp(72px, 10vw, 128px); border-bottom: 1px solid var(--line); }
+.head { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end; margin-bottom: clamp(40px, 6vw, 72px); }
+.kicker { font-size: 13px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--red-hi); margin: 0 0 18px; font-weight: 500; }
+h2 { font-family: var(--display); font-weight: 500; font-size: clamp(38px, 4.8vw, 64px); line-height: 1.05; margin: 0; text-wrap: balance; }
+.head p { color: var(--muted); margin: 0; max-width: 32em; }
+
+/* Services */
+.services { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.svc { padding: 40px 36px 44px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); min-width: 0; transition: background .3s; position: relative; }
+.svc:hover { background: var(--panel); }
+.svc::after { content: ""; position: absolute; left: 36px; right: 36px; bottom: -1px; height: 2px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform .4s; }
+.svc:hover::after { transform: scaleX(1); }
+.svc svg { width: 44px; height: 44px; color: var(--fg); margin-bottom: 28px; }
+.svc h3 { font-size: 20px; font-weight: 600; letter-spacing: 0.02em; margin: 0 0 12px; }
+.svc p { color: var(--muted); margin: 0; font-size: 17px; }
+
+/* Process */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: s; }
+.steps li { padding: 0 28px 0 0; min-width: 0; counter-increment: s; }
+.steps li::before {
+  content: "0" counter(s); display: block; font-family: var(--display); font-size: 64px; line-height: 1; color: var(--fg);
+  padding-bottom: 22px; margin-bottom: 22px; border-bottom: 1px solid var(--line);
+}
+.steps li:first-child::before { border-bottom-color: var(--red); }
+.steps h3 { font-size: 19px; font-weight: 600; margin: 0 0 10px; }
+.steps p { color: var(--muted); margin: 0; font-size: 17px; }
+
+/* Story */
+.story .wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(40px, 7vw, 100px); align-items: center; }
+.story-art { border: 1px solid var(--line); padding: clamp(28px, 4vw, 48px); background: linear-gradient(180deg, var(--panel), var(--ink)); }
+.story-art svg { width: 100%; height: auto; display: block; color: var(--fg); }
+.legend { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 14px; }
+.legend li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: center; color: var(--muted); font-size: 16px; }
+.legend svg { width: 36px; height: 24px; }
+.quote { font-family: var(--display); font-style: italic; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.3; margin: 32px 0 0; padding-left: 24px; border-left: 2px solid var(--red); color: var(--fg); }
+.story p.body { color: var(--muted); margin: 24px 0 0; max-width: 34em; }
+
+/* Contact */
+.contact .wrap { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(40px, 6vw, 88px); }
+.info { display: grid; gap: 0; margin-top: 40px; border-top: 1px solid var(--line); }
+.info div { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.info dt { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+.info dd { margin: 0; font-size: 19px; min-width: 0; overflow-wrap: anywhere; }
+.info .hours { font-variant-numeric: tabular-nums; }
+.copy { background: none; border: 1px solid var(--line); color: var(--muted); font: 500 11px var(--sans); letter-spacing: .14em; text-transform: uppercase; padding: 6px 10px; margin-left: 10px; cursor: pointer; vertical-align: middle; }
+.copy:hover { color: var(--fg); border-color: var(--fg); }
+
+form { background: var(--panel); border: 1px solid var(--line); padding: clamp(24px, 4vw, 48px); display: grid; gap: 22px; min-width: 0; }
+form h3 { font-family: var(--display); font-weight: 500; font-size: 34px; margin: 0; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.field { display: grid; gap: 8px; min-width: 0; }
+label { font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+input, select, textarea {
+  width: 100%; font: 400 18px var(--sans); color: var(--fg); background: var(--ink);
+  border: 1px solid var(--line); border-radius: 0; padding: 15px 16px; transition: border-color .2s;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--fg); }
+textarea { min-height: 110px; resize: vertical; }
+select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 22px) 50%, calc(100% - 16px) 50%; background-size: 6px 6px; background-repeat: no-repeat; }
+.error { color: var(--red-hi); font-size: 15px; margin: 0; }
+.result { border: 1px solid var(--line); background: var(--ink); padding: 22px; display: grid; gap: 16px; }
+.result pre { margin: 0; white-space: pre-wrap; font: 400 15px/1.6 var(--sans); color: var(--muted); }
+.result .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Footer */
+footer { padding-block: 64px 48px; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 28px; }
+footer .brand svg { width: 76px; }
+footer small { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .nav-links { display: none; }
+  .hero .wrap, .story .wrap, .contact .wrap, .head { grid-template-columns: 1fr; }
+  .emblem { justify-self: center; order: -1; max-width: 460px; }
+  .services { grid-template-columns: 1fr 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; row-gap: 48px; }
+}
+@media (max-width: 640px) {
+  body { font-size: 17px; }
+  .brand-sub { display: none; }
+  .brand svg { width: 46px; }
+  .brand-name { font-size: 17px; letter-spacing: 0.26em; }
+  .nav-right .btn { display: none; }
+  .promise-list { grid-template-columns: 1fr; }
+  .promise li + li { border-left: 0; border-top: 1px solid var(--line); }
+  .services { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+  .info div { grid-template-columns: 1fr; gap: 4px; }
+  .hero-cta .btn { flex: 1 1 100%; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <polygon id="st" points="0,-6 1.48,-2.04 5.71,-1.85 2.4,0.78 3.53,4.85 0,2.52 -3.53,4.85 -2.4,0.78 -5.71,-1.85 -1.48,-2.04"/>
+    <path id="plus" d="M-3,-9 h6 v6 h6 v6 h-6 v6 h-6 v-6 h-6 v-6 h6 Z"/>
+  </defs>
+</svg>
+
+<nav class="nav" aria-label="Navigation">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Garage Ahmeti Mécanique">
+      <svg viewBox="150 240 700 410" aria-hidden="true">
+        <path d="M160,600 L320,452 L382,500 L500,318 L600,462 L656,414 L840,600" fill="none" stroke="currentColor" stroke-width="14" stroke-linejoin="miter"/>
+        <path d="M262,598 C256,586 258,574 272,568 C320,548 380,520 450,508 C500,500 540,502 570,516 L606,540 C662,546 714,554 738,566 C748,572 750,586 746,598 L680,598 A34,34 0 0 0 612,598 L390,598 A34,34 0 0 0 322,598 Z" fill="currentColor" stroke="#0B0B0C" stroke-width="22" paint-order="stroke"/>
+        <circle cx="356" cy="598" r="27" fill="#0B0B0C" stroke="currentColor" stroke-width="12"/>
+        <circle cx="646" cy="598" r="27" fill="#0B0B0C" stroke="currentColor" stroke-width="12"/>
+      </svg>
+      <span><span class="brand-name">AHMETI</span><span class="brand-sub" data-i18n="brandSub">GARAGE · MÉCANIQUE</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#services" data-i18n="navServices">Services</a>
+      <a href="#atelier" data-i18n="navProcess">Déroulement</a>
+      <a href="#histoire" data-i18n="navStory">Notre histoire</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Langue / Language / Gjuha">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-lang="sq" aria-pressed="false">SQ</button>
+      </div>
+      <a class="btn btn-red btn-sm" href="#contact" data-i18n="navCta">Rendez-vous</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow"><span data-i18n="eyebrow">Garage · Mécanique · Suisse</span></p>
+      <h1 data-i18n="h1">Votre voiture, entre des mains <em>de précision.</em></h1>
+      <p class="lead" data-i18n="lead">Entretien, diagnostic et réparation toutes marques. Un devis clair avant chaque travail, et une voiture rendue propre et prête à rouler.</p>
+      <div class="hero-cta">
+        <a class="btn btn-red" href="#contact" data-i18n="ctaBook">Prendre rendez-vous</a>
+        <a class="btn" href="#services" data-i18n="ctaServices">Nos services</a>
+      </div>
+    </div>
+    <div class="emblem" aria-hidden="true">
+      <svg viewBox="140 240 720 420">
+        <g fill="currentColor">
+          <use class="star" href="#st" x="430" y="282"/>
+          <use class="star" href="#st" x="458" y="273"/>
+          <use class="star" href="#st" x="486" y="268.5"/>
+          <use class="star" href="#st" x="514" y="268.5"/>
+          <use class="star" href="#st" x="542" y="273"/>
+          <use class="star" href="#st" x="570" y="282"/>
+        </g>
+        <path d="M160,600 L320,452 L382,500 L500,318 L600,462 L656,414 L840,600" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="miter"/>
+        <path d="M461,378 L480,392 L500,372 L520,394 L539,378" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M298,472 L312,480 L324,468 L338,478" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M636,434 L648,442 L660,430 L674,440" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        <g class="car">
+          <path d="M262,598 C256,586 258,574 272,568 C320,548 380,520 450,508 C500,500 540,502 570,516 L606,540 C662,546 714,554 738,566 C748,572 750,586 746,598 L680,598 A34,34 0 0 0 612,598 L390,598 A34,34 0 0 0 322,598 Z" fill="currentColor" stroke="#0B0B0C" stroke-width="12" stroke-linejoin="round" paint-order="stroke"/>
+          <path d="M392,548 C430,530 466,519 500,517 L500,548 Z M510,516 C534,516 552,522 566,530 L584,548 L510,548 Z" fill="#0B0B0C"/>
+          <path d="M314,563 C430,556 600,556 714,565" fill="none" stroke="#C8102E" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="356" cy="598" r="27" fill="#0B0B0C" stroke="currentColor" stroke-width="6"/>
+          <circle cx="356" cy="598" r="13" fill="none" stroke="currentColor" stroke-width="3"/>
+          <circle cx="646" cy="598" r="27" fill="#0B0B0C" stroke="currentColor" stroke-width="6"/>
+          <circle cx="646" cy="598" r="13" fill="none" stroke="currentColor" stroke-width="3"/>
+        </g>
+        <defs><linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="140" x2="860" y1="0" y2="0"><stop offset="0" stop-color="#F4F4F2" stop-opacity="0"/><stop offset=".25" stop-color="#F4F4F2"/><stop offset=".75" stop-color="#F4F4F2"/><stop offset="1" stop-color="#F4F4F2" stop-opacity="0"/></linearGradient></defs>
+        <line x1="140" y1="636" x2="860" y2="636" stroke="url(#fade)" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+  <div class="promise">
+    <ul class="promise-list">
+      <li><div><strong data-i18n="p1t">Toutes marques</strong><span data-i18n="p1d">Citadines, SUV, utilitaires et sportives.</span></div></li>
+      <li><div><strong data-i18n="p2t">Devis avant travaux</strong><span data-i18n="p2d">Vous validez le prix avant qu'on commence.</span></div></li>
+      <li><div><strong data-i18n="p3t">Travail soigné</strong><span data-i18n="p3d">Pièces de qualité et contrôle final.</span></div></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="kicker" data-i18n="svcKicker">Services</p>
+          <h2 data-i18n="svcTitle">Tout ce dont votre voiture a besoin, sous un même toit.</h2>
+        </div>
+        <p data-i18n="svcIntro">Du simple service annuel à la réparation complète, chaque voiture est traitée avec le même soin.</p>
+      </div>
+      <div class="services">
+        <article class="svc">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 6a9 9 0 0 0-8.5 12L7 32.5a3.5 3.5 0 0 0 5 5L26.5 23A9 9 0 0 0 38 14.5l-5.5 5.5-5-1-1-5L32 8.5A9 9 0 0 0 30 6Z"/></svg>
+          <h3 data-i18n="s1t">Entretien &amp; service</h3>
+          <p data-i18n="s1d">Vidange, filtres, bougies et contrôles selon le carnet du constructeur.</p>
+        </article>
+        <article class="svc">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 32a16 16 0 1 1 32 0"/><path d="M24 32l8-11"/><circle cx="24" cy="32" r="2.5"/><path d="M12 32h2M34 32h2M24 16v2M15 21l1.5 1.5"/></svg>
+          <h3 data-i18n="s2t">Diagnostic électronique</h3>
+          <p data-i18n="s2d">Lecture des codes défaut et recherche de panne, voyant moteur compris.</p>
+        </article>
+        <article class="svc">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="6"/><path d="M33 9.5c4 2.5 6.5 6.5 7.5 10.5" stroke-linecap="round"/><circle cx="24" cy="12" r="1.2"/><circle cx="36" cy="24" r="1.2"/><circle cx="24" cy="36" r="1.2"/><circle cx="12" cy="24" r="1.2"/></svg>
+          <h3 data-i18n="s3t">Freins &amp; suspension</h3>
+          <p data-i18n="s3d">Plaquettes, disques, amortisseurs et direction, pour rouler en sécurité.</p>
+        </article>
+        <article class="svc">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="9"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11.3 11.3l4.2 4.2M32.5 32.5l4.2 4.2M11.3 36.7l4.2-4.2M32.5 15.5l4.2-4.2" stroke-linecap="round"/></svg>
+          <h3 data-i18n="s4t">Pneus &amp; géométrie</h3>
+          <p data-i18n="s4d">Changement été / hiver, équilibrage, stockage et réglage du parallélisme.</p>
+        </article>
+        <article class="svc">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M24 5v38M7.5 14.5l33 19M7.5 33.5l33-19"/><path d="M19 8l5 4 5-4M19 40l5-4 5 4M8 20l6-1-2-6M40 28l-6 1 2 6M8 28l6 1-2 6M40 20l-6-1 2-6"/></svg>
+          <h3 data-i18n="s5t">Climatisation</h3>
+          <p data-i18n="s5d">Recharge, contrôle d'étanchéité et désinfection du circuit.</p>
+        </article>
+        <article class="svc">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="8" width="28" height="34"/><path d="M18 8V5h12v3"/><path d="M16 22l4 4 8-8"/><path d="M16 33h16"/></svg>
+          <h3 data-i18n="s6t">Préparation à l'expertise</h3>
+          <p data-i18n="s6d">Contrôle complet et remise en conformité avant le passage au service des automobiles.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="atelier">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="kicker" data-i18n="prKicker">Déroulement</p>
+          <h2 data-i18n="prTitle">Simple, clair, sans surprise.</h2>
+        </div>
+        <p data-i18n="prIntro">Vous savez à chaque étape ce qui est fait sur votre voiture, et combien cela coûte.</p>
+      </div>
+      <ol class="steps">
+        <li><h3 data-i18n="st1t">Rendez-vous</h3><p data-i18n="st1d">Par téléphone, WhatsApp ou le formulaire ci-dessous.</p></li>
+        <li><h3 data-i18n="st2t">Diagnostic &amp; devis</h3><p data-i18n="st2d">On contrôle la voiture et on vous explique le prix avant de commencer.</p></li>
+        <li><h3 data-i18n="st3t">Travaux</h3><p data-i18n="st3d">Réparation soignée, avec des pièces de qualité.</p></li>
+        <li><h3 data-i18n="st4t">Restitution</h3><p data-i18n="st4d">Essai, contrôle final, et une voiture rendue propre.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block story" id="histoire">
+    <div class="wrap">
+      <div class="story-art">
+        <svg viewBox="140 240 720 420" aria-hidden="true">
+          <g fill="currentColor">
+            <use href="#st" x="430" y="282"/><use href="#st" x="458" y="273"/><use href="#st" x="486" y="268.5"/>
+            <use href="#st" x="514" y="268.5"/><use href="#st" x="542" y="273"/><use href="#st" x="570" y="282"/>
+          </g>
+          <path d="M160,600 L320,452 L382,500 L500,318 L600,462 L656,414 L840,600" fill="none" stroke="currentColor" stroke-width="3"/>
+          <path d="M461,378 L480,392 L500,372 L520,394 L539,378" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <use href="#plus" x="500" y="470" fill="#C8102E" transform="translate(500 470) scale(1.6) translate(-500 -470)"/>
+        </svg>
+        <ul class="legend">
+          <li><svg viewBox="0 0 36 24" aria-hidden="true"><path d="M2 22 L12 10 L16 14 L24 3 L34 22" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span data-i18n="lg1">Les Alpes : la Suisse, où nous travaillons.</span></li>
+          <li><svg viewBox="0 0 36 24" aria-hidden="true"><g fill="currentColor"><use href="#st" x="6" y="13"/><use href="#st" x="18" y="10"/><use href="#st" x="30" y="13"/></g></svg><span data-i18n="lg2">Six étoiles : le Kosovo, d'où vient la famille.</span></li>
+          <li><svg viewBox="0 0 36 24" aria-hidden="true"><use href="#plus" x="18" y="12" fill="#C8102E"/></svg><span data-i18n="lg3">La croix rouge : la précision suisse.</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="kicker" data-i18n="hsKicker">Notre histoire</p>
+        <h2 data-i18n="hsTitle">Deux pays, un seul standard.</h2>
+        <p class="body" data-i18n="hsBody">Garage Ahmeti Mécanique est une affaire de famille. Nos racines sont au Kosovo, notre atelier est en Suisse. Nous travaillons avec la rigueur suisse et l'accueil chaleureux de chez nous : on prend le temps d'expliquer, et on traite chaque voiture comme si c'était la nôtre.</p>
+        <p class="quote" data-i18n="hsQuote">« Une voiture bien entretenue, c'est une famille qui rentre en sécurité. »</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="wrap">
+      <div>
+        <p class="kicker" data-i18n="ctKicker">Contact</p>
+        <h2 data-i18n="ctTitle">Prenez rendez-vous.</h2>
+        <dl class="info">
+          <div><dt data-i18n="ctPhone">Téléphone</dt><dd><span id="phone">+41 XX XXX XX XX</span><button class="copy" type="button" data-copy="phone" data-i18n="copy">Copier</button></dd></div>
+          <div><dt data-i18n="ctAddr">Adresse</dt><dd>Rue et numéro<br>NPA Ville, Suisse</dd></div>
+          <div><dt data-i18n="ctHours">Horaires</dt><dd class="hours"><span data-i18n="h1d">Lun – Ven</span> 07:30 – 12:00 · 13:30 – 18:00<br><span data-i18n="h2d">Samedi sur rendez-vous</span></dd></div>
+          <div><dt data-i18n="ctLang">Langues</dt><dd>Français · Deutsch · Shqip · English</dd></div>
+        </dl>
+      </div>
+
+      <form id="booking" novalidate>
+        <h3 data-i18n="fTitle">Demande de rendez-vous</h3>
+        <div class="row">
+          <div class="field"><label for="f-name" data-i18n="fName">Nom</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-tel" data-i18n="fTel">Téléphone</label><input id="f-tel" name="tel" type="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="f-car" data-i18n="fCar">Voiture (marque, modèle)</label><input id="f-car" name="car" data-i18n-ph="fCarPh" placeholder="ex. VW Golf 2019"></div>
+          <div class="field"><label for="f-date" data-i18n="fDate">Date souhaitée</label><input id="f-date" name="date" type="date"></div>
+        </div>
+        <div class="field">
+          <label for="f-svc" data-i18n="fSvc">Service</label>
+          <select id="f-svc" name="svc">
+            <option data-i18n="s1t">Entretien &amp; service</option>
+            <option data-i18n="s2t">Diagnostic électronique</option>
+            <option data-i18n="s3t">Freins &amp; suspension</option>
+            <option data-i18n="s4t">Pneus &amp; géométrie</option>
+            <option data-i18n="s5t">Climatisation</option>
+            <option data-i18n="s6t">Préparation à l'expertise</option>
+            <option data-i18n="fOther">Autre</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg" data-i18n="fMsg">Message</label><textarea id="f-msg" name="msg" data-i18n-ph="fMsgPh" placeholder="Décrivez le problème en quelques mots."></textarea></div>
+        <p class="error" id="f-err" hidden data-i18n="fErr">Merci d'indiquer votre nom et votre téléphone.</p>
+        <button class="btn btn-red" type="submit" data-i18n="fSend">Préparer ma demande</button>
+        <div class="result" id="result" hidden>
+          <pre id="summary"></pre>
+          <div class="actions">
+            <a class="btn btn-red btn-sm" id="wa" href="#" target="_blank" rel="noopener" data-i18n="fWa">Envoyer par WhatsApp</a>
+            <button class="btn btn-sm" type="button" id="copy-sum" data-i18n="fCopy">Copier le message</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Garage Ahmeti Mécanique">
+      <svg viewBox="150 240 700 410" aria-hidden="true">
+        <path d="M160,600 L320,452 L382,500 L500,318 L600,462 L656,414 L840,600" fill="none" stroke="currentColor" stroke-width="12"/>
+        <path d="M262,598 C256,586 258,574 272,568 C320,548 380,520 450,508 C500,500 540,502 570,516 L606,540 C662,546 714,554 738,566 C748,572 750,586 746,598 L680,598 A34,34 0 0 0 612,598 L390,598 A34,34 0 0 0 322,598 Z" fill="currentColor" stroke="#0B0B0C" stroke-width="20" paint-order="stroke"/>
+        <circle cx="356" cy="598" r="27" fill="#0B0B0C" stroke="currentColor" stroke-width="12"/>
+        <circle cx="646" cy="598" r="27" fill="#0B0B0C" stroke="currentColor" stroke-width="12"/>
+      </svg>
+      <span><span class="brand-name">AHMETI</span><span class="brand-sub" data-i18n="brandSub">GARAGE · MÉCANIQUE</span></span>
+    </a>
+    <small>© 2026 Garage Ahmeti Mécanique</small>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // WhatsApp number in international format without "+" or spaces, e.g. "41791234567".
+  var WHATSAPP = "41000000000";
+
+  var T = {
+    en: {
+      brandSub: "GARAGE · MECHANICS", navServices: "Services", navProcess: "How it works", navStory: "Our story", navContact: "Contact", navCta: "Book",
+      eyebrow: "Garage · Mechanics · Switzerland",
+      h1: "Your car, in <em>precise hands.</em>",
+      lead: "Servicing, diagnostics and repairs for every make. A clear quote before any work, and your car handed back clean and ready to drive.",
+      ctaBook: "Book an appointment", ctaServices: "Our services",
+      p1t: "Every make", p1d: "City cars, SUVs, vans and sports cars.",
+      p2t: "Quote first", p2d: "You approve the price before we start.",
+      p3t: "Careful work", p3d: "Quality parts and a final check.",
+      svcKicker: "Services", svcTitle: "Everything your car needs, under one roof.", svcIntro: "From a simple yearly service to a full repair, every car gets the same care.",
+      s1t: "Servicing", s1d: "Oil, filters, spark plugs and checks by the manufacturer's schedule.",
+      s2t: "Electronic diagnostics", s2d: "Fault-code reading and troubleshooting, engine warning light included.",
+      s3t: "Brakes & suspension", s3d: "Pads, discs, shock absorbers and steering, so you drive safely.",
+      s4t: "Tyres & alignment", s4d: "Summer / winter changeover, balancing, storage and wheel alignment.",
+      s5t: "Air conditioning", s5d: "Recharge, leak test and system disinfection.",
+      s6t: "Inspection preparation", s6d: "Full check and fixes before your vehicle inspection (MFK / expertise).",
+      prKicker: "How it works", prTitle: "Simple, clear, no surprises.", prIntro: "At every step you know what is being done to your car, and what it costs.",
+      st1t: "Appointment", st1d: "By phone, WhatsApp or the form below.",
+      st2t: "Diagnosis & quote", st2d: "We check the car and explain the price before we start.",
+      st3t: "Work", st3d: "Careful repair with quality parts.",
+      st4t: "Hand-over", st4d: "Test drive, final check, and a clean car.",
+      lg1: "The Alps: Switzerland, where we work.", lg2: "Six stars: Kosovo, where the family comes from.", lg3: "The red cross: Swiss precision.",
+      hsKicker: "Our story", hsTitle: "Two countries, one standard.",
+      hsBody: "Garage Ahmeti Mécanique is a family business. Our roots are in Kosovo, our workshop is in Switzerland. We work with Swiss rigour and the warm welcome of home: we take the time to explain, and we treat every car as if it were our own.",
+      hsQuote: "“A well-kept car means a family that gets home safely.”",
+      ctKicker: "Contact", ctTitle: "Book an appointment.", ctPhone: "Phone", ctAddr: "Address", ctHours: "Hours", ctLang: "Languages",
+      h1d: "Mon – Fri", h2d: "Saturday by appointment", copy: "Copy",
+      fTitle: "Appointment request", fName: "Name", fTel: "Phone", fCar: "Car (make, model)", fCarPh: "e.g. VW Golf 2019", fDate: "Preferred date",
+      fSvc: "Service", fOther: "Other", fMsg: "Message", fMsgPh: "Describe the problem in a few words.",
+      fErr: "Please enter your name and phone number.", fSend: "Prepare my request", fWa: "Send via WhatsApp", fCopy: "Copy message",
+      sumHead: "Appointment request", sumName: "Name", sumTel: "Phone", sumCar: "Car", sumDate: "Date", sumSvc: "Service", sumMsg: "Message", copied: "Copied"
+    },
+    sq: {
+      brandSub: "GARAZH · MEKANIKË", navServices: "Shërbimet", navProcess: "Si punojmë", navStory: "Historia jonë", navContact: "Kontakt", navCta: "Termin",
+      eyebrow: "Garazh · Mekanikë · Zvicër",
+      h1: "Vetura juaj, në <em>duar të sigurta.</em>",
+      lead: "Servisim, diagnostikë dhe riparim për të gjitha markat. Ofertë e qartë para çdo pune, dhe vetura ju kthehet e pastër dhe gati për rrugë.",
+      ctaBook: "Rezervo termin", ctaServices: "Shërbimet tona",
+      p1t: "Të gjitha markat", p1d: "Vetura qyteti, SUV, furgonë dhe sportive.",
+      p2t: "Ofertë para punës", p2d: "Ju e aprovoni çmimin para se të fillojmë.",
+      p3t: "Punë e kujdesshme", p3d: "Pjesë cilësore dhe kontroll përfundimtar.",
+      svcKicker: "Shërbimet", svcTitle: "Gjithçka që i duhet veturës suaj, në një vend.", svcIntro: "Nga servisi vjetor deri te riparimi i plotë, çdo veturë trajtohet me të njëjtin kujdes.",
+      s1t: "Servisim", s1d: "Vaj, filtra, kandela dhe kontrolle sipas planit të prodhuesit.",
+      s2t: "Diagnostikë elektronike", s2d: "Leximi i kodeve të gabimit dhe gjetja e defektit, edhe drita e motorit.",
+      s3t: "Frenat & amortizatorët", s3d: "Pllaka, disqe, amortizatorë dhe drejtim, për vozitje të sigurt.",
+      s4t: "Gomat & gjeometria", s4d: "Ndërrimi verë / dimër, balancimi, ruajtja dhe rregullimi i gjeometrisë.",
+      s5t: "Klima", s5d: "Mbushje, kontroll i rrjedhjeve dhe dezinfektim i sistemit.",
+      s6t: "Përgatitje për ekspertizë", s6d: "Kontroll i plotë dhe riparime para kontrollit teknik (MFK / expertise).",
+      prKicker: "Si punojmë", prTitle: "E thjeshtë, e qartë, pa surpriza.", prIntro: "Në çdo hap e dini çfarë bëhet në veturën tuaj dhe sa kushton.",
+      st1t: "Termini", st1d: "Me telefon, WhatsApp ose me formularin më poshtë.",
+      st2t: "Diagnostikë & ofertë", st2d: "E kontrollojmë veturën dhe jua shpjegojmë çmimin para se të fillojmë.",
+      st3t: "Punimet", st3d: "Riparim i kujdesshëm me pjesë cilësore.",
+      st4t: "Dorëzimi", st4d: "Provë, kontroll përfundimtar dhe veturë e pastër.",
+      lg1: "Alpet: Zvicra, ku punojmë.", lg2: "Gjashtë yje: Kosova, prej nga vjen familja.", lg3: "Kryqi i kuq: precizioni zviceran.",
+      hsKicker: "Historia jonë", hsTitle: "Dy vende, një standard.",
+      hsBody: "Garage Ahmeti Mécanique është biznes familjar. Rrënjët tona janë në Kosovë, punëtoria jonë është në Zvicër. Punojmë me rreptësinë zvicerane dhe mikpritjen e shtëpisë: marrim kohë për t'ju shpjeguar, dhe çdo veturë e trajtojmë si të ishte e jona.",
+      hsQuote: "“Një veturë e mirëmbajtur do të thotë një familje që kthehet shëndoshë në shtëpi.”",
+      ctKicker: "Kontakt", ctTitle: "Rezervoni një termin.", ctPhone: "Telefoni", ctAddr: "Adresa", ctHours: "Orari", ctLang: "Gjuhët",
+      h1d: "Hën – Pre", h2d: "E shtunë me termin", copy: "Kopjo",
+      fTitle: "Kërkesë për termin", fName: "Emri", fTel: "Telefoni", fCar: "Vetura (marka, modeli)", fCarPh: "p.sh. VW Golf 2019", fDate: "Data e dëshiruar",
+      fSvc: "Shërbimi", fOther: "Tjetër", fMsg: "Mesazhi", fMsgPh: "Përshkruani problemin me pak fjalë.",
+      fErr: "Ju lutem shkruani emrin dhe numrin e telefonit.", fSend: "Përgatit kërkesën", fWa: "Dërgo me WhatsApp", fCopy: "Kopjo mesazhin",
+      sumHead: "Kërkesë për termin", sumName: "Emri", sumTel: "Telefoni", sumCar: "Vetura", sumDate: "Data", sumSvc: "Shërbimi", sumMsg: "Mesazhi", copied: "U kopjua"
+    },
+    fr: { sumHead: "Demande de rendez-vous", sumName: "Nom", sumTel: "Téléphone", sumCar: "Voiture", sumDate: "Date", sumSvc: "Service", sumMsg: "Message", copied: "Copié" }
+  };
+
+  // French is the page's own text: read it from the DOM once.
+  document.querySelectorAll("[data-i18n]").forEach(function (el) {
+    var k = el.getAttribute("data-i18n");
+    if (!(k in T.fr)) T.fr[k] = el.innerHTML;
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
+    T.fr[el.getAttribute("data-i18n-ph")] = el.getAttribute("placeholder");
+  });
+
+  var lang = "fr";
+  function t(k) { return (T[lang] && T[lang][k]) || T.fr[k] || k; }
+
+  function setLang(l) {
+    lang = T[l] ? l : "fr";
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) { el.innerHTML = t(el.getAttribute("data-i18n")); });
+    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) { el.setAttribute("placeholder", t(el.getAttribute("data-i18n-ph"))); });
+    document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+    try { localStorage.setItem("ahmeti-lang", lang); } catch (e) {}
+    if (!result.hidden) buildSummary();
+  }
+
+  var form = document.getElementById("booking");
+  var result = document.getElementById("result");
+  var err = document.getElementById("f-err");
+
+  function buildSummary() {
+    var f = form.elements;
+    var sel = f.svc.options[f.svc.selectedIndex];
+    var lines = [
+      t("sumHead") + " — Garage Ahmeti Mécanique",
+      t("sumName") + ": " + f.name.value.trim(),
+      t("sumTel") + ": " + f.tel.value.trim()
+    ];
+    if (f.car.value.trim()) lines.push(t("sumCar") + ": " + f.car.value.trim());
+    if (f.date.value) lines.push(t("sumDate") + ": " + f.date.value);
+    lines.push(t("sumSvc") + ": " + sel.textContent);
+    if (f.msg.value.trim()) lines.push(t("sumMsg") + ": " + f.msg.value.trim());
+    var text = lines.join("\n");
+    document.getElementById("summary").textContent = text;
+    document.getElementById("wa").href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(text);
+    return text;
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var ok = form.elements.name.value.trim() && form.elements.tel.value.trim();
+    err.hidden = !!ok;
+    if (!ok) { (form.elements.name.value.trim() ? form.elements.tel : form.elements.name).focus(); return; }
+    buildSummary();
+    result.hidden = false;
+    result.scrollIntoView({ block: "nearest" });
+  });
+
+  function copyText(text, btn) {
+    var done = function () { var o = btn.innerHTML; btn.innerHTML = t("copied"); setTimeout(function () { btn.innerHTML = o; }, 1600); };
+    var fallback = function () {
+      var r = document.createRange(), node = btn.previousElementSibling || document.getElementById("summary");
+      r.selectNodeContents(node); var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback);
+    else fallback();
+  }
+  document.getElementById("copy-sum").addEventListener("click", function () { copyText(buildSummary(), this); });
+  document.querySelectorAll("[data-copy]").forEach(function (b) {
+    b.addEventListener("click", function () { copyText(document.getElementById(b.dataset.copy).textContent, b); });
+  });
+
+  document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+  var saved = null;
+  try { saved = localStorage.getItem("ahmeti-lang"); } catch (e) {}
+  if (saved && saved !== "fr") setLang(saved);
+})();
+</script>
