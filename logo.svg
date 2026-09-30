@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <style>
+      @font-face { font-family: 'Cinzel'; font-weight: 900; src: url(data:font/woff2;base64,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) format('woff2'); }
+      @font-face { font-family: 'Montserrat'; font-weight: 500; src: url(data:font/woff2;base64,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) format('woff2'); }
+      .title { font-family: 'Cinzel', 'Trajan Pro', 'Times New Roman', serif; font-weight: 900; }
+      .sub   { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; font-weight: 500; }
+    </style>
+
+    <!-- Metallic gold -->
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#FFF1B8"/>
+      <stop offset="0.22" stop-color="#E9C66A"/>
+      <stop offset="0.5"  stop-color="#B8862F"/>
+      <stop offset="0.72" stop-color="#F3D98A"/>
+      <stop offset="1"    stop-color="#9C6E1E"/>
+    </linearGradient>
+    <linearGradient id="goldH" gradientUnits="userSpaceOnUse" x1="150" y1="0" x2="850" y2="0">
+      <stop offset="0"    stop-color="#9C6E1E"/>
+      <stop offset="0.3"  stop-color="#F3D98A"/>
+      <stop offset="0.5"  stop-color="#FFF1B8"/>
+      <stop offset="0.7"  stop-color="#E0B85A"/>
+      <stop offset="1"    stop-color="#9C6E1E"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#1c1c1f"/>
+      <stop offset="1" stop-color="#060607"/>
+    </radialGradient>
+    <!-- Deep flag tones for a premium look -->
+    <linearGradient id="swissRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E4322B"/>
+      <stop offset="1" stop-color="#8E1510"/>
+    </linearGradient>
+    <linearGradient id="kosovoBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2F5BC4"/>
+      <stop offset="1" stop-color="#132C70"/>
+    </linearGradient>
+
+    <path id="shield" d="M360,150 H640 V330 Q640,445 500,500 Q360,445 360,330 Z"/>
+    <clipPath id="shieldClip"><use href="#shield"/></clipPath>
+
+    <polygon id="star" points="0,-9 2.1,-2.9 8.6,-2.8 3.4,1.1 5.3,7.3 0,3.6 -5.3,7.3 -3.4,1.1 -8.6,-2.8 -2.1,-2.9"/>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bg)"/>
+
+  <!-- Outer rings -->
+  <circle cx="500" cy="500" r="468" fill="none" stroke="url(#gold)" stroke-width="10"/>
+  <circle cx="500" cy="500" r="448" fill="none" stroke="url(#gold)" stroke-width="2"/>
+  <circle cx="500" cy="500" r="440" fill="none" stroke="#E9C66A" stroke-opacity="0.35" stroke-width="1" stroke-dasharray="2 6"/>
+
+  <!-- Crown of three stars -->
+  <g fill="url(#gold)">
+    <use href="#star" transform="translate(455,112) scale(1.1)"/>
+    <use href="#star" transform="translate(500,100) scale(1.5)"/>
+    <use href="#star" transform="translate(545,112) scale(1.1)"/>
+  </g>
+
+  <!-- Shield: Switzerland | Kosovo -->
+  <g clip-path="url(#shieldClip)">
+    <rect x="360" y="150" width="140" height="360" fill="url(#swissRed)"/>
+    <rect x="500" y="150" width="140" height="360" fill="url(#kosovoBlue)"/>
+
+    <!-- Swiss cross -->
+    <g fill="#FFFFFF">
+      <rect x="395" y="277" width="70" height="22"/>
+      <rect x="419" y="253" width="22" height="70"/>
+    </g>
+
+    <!-- Kosovo: six stars over the golden map -->
+    <g fill="#FFFFFF">
+      <use href="#star" transform="translate(527,238) scale(0.8)"/>
+      <use href="#star" transform="translate(545,226) scale(0.8)"/>
+      <use href="#star" transform="translate(563,220) scale(0.8)"/>
+      <use href="#star" transform="translate(581,220) scale(0.8)"/>
+      <use href="#star" transform="translate(599,226) scale(0.8)"/>
+      <use href="#star" transform="translate(617,238) scale(0.8)"/>
+    </g>
+    <path fill="url(#gold)" transform="translate(572,300) scale(1.25)"
+          d="M-6,-38 L4,-33 L10,-24 L20,-18 L22,-8 L31,-2 L30,8 L22,14
+             L17,24 L8,28 L3,37 L-6,40 L-12,33 L-21,27 L-24,16 L-33,10
+             L-35,-2 L-28,-10 L-26,-22 L-16,-26 L-12,-35 Z"/>
+
+    <!-- Gloss highlight -->
+    <path d="M360,150 H640 V210 Q500,250 360,210 Z" fill="#FFFFFF" fill-opacity="0.08"/>
+  </g>
+  <!-- Shield border + divider -->
+  <line x1="500" y1="150" x2="500" y2="500" stroke="url(#gold)" stroke-width="3"/>
+  <use href="#shield" fill="none" stroke="url(#gold)" stroke-width="9" stroke-linejoin="round"/>
+  <use href="#shield" fill="none" stroke="#0a0a0b" stroke-width="1.5" transform="translate(500,325) scale(0.955) translate(-500,-325)"/>
+
+  <!-- Sports car silhouette -->
+  <g transform="translate(0,-8)">
+    <!-- speed lines -->
+    <g stroke="url(#goldH)" stroke-linecap="round">
+      <line x1="150" y1="598" x2="245" y2="598" stroke-width="3"/>
+      <line x1="175" y1="614" x2="250" y2="614" stroke-width="3"/>
+      <line x1="200" y1="630" x2="252" y2="630" stroke-width="3"/>
+    </g>
+    <!-- body -->
+    <path fill="url(#gold)" stroke="#0a0a0b" stroke-width="2"
+          d="M262,640 L262,614 Q266,594 300,588 L372,578
+             Q432,550 490,544 Q556,540 604,558 L652,579
+             Q720,582 738,598 Q748,608 746,630 L744,640
+             L690,640 A40,40 0 0 0 610,640
+             L390,640 A40,40 0 0 0 310,640 Z"/>
+    <!-- windows -->
+    <path fill="#0d0d0f" d="M398,578 Q440,558 486,554 L486,578 Z"/>
+    <path fill="#0d0d0f" d="M496,553 Q552,551 584,564 L604,578 L496,578 Z"/>
+    <!-- body crease -->
+    <path d="M300,602 Q500,594 728,604" fill="none" stroke="#0a0a0b" stroke-opacity="0.45" stroke-width="2"/>
+    <!-- wheels -->
+    <g>
+      <circle cx="350" cy="640" r="33" fill="#0d0d0f" stroke="url(#gold)" stroke-width="6"/>
+      <circle cx="350" cy="640" r="16" fill="none" stroke="url(#gold)" stroke-width="3"/>
+      <circle cx="350" cy="640" r="5" fill="url(#gold)"/>
+      <circle cx="650" cy="640" r="33" fill="#0d0d0f" stroke="url(#gold)" stroke-width="6"/>
+      <circle cx="650" cy="640" r="16" fill="none" stroke="url(#gold)" stroke-width="3"/>
+      <circle cx="650" cy="640" r="5" fill="url(#gold)"/>
+    </g>
+    <!-- road -->
+    <line x1="230" y1="682" x2="770" y2="682" stroke="url(#goldH)" stroke-width="2"/>
+  </g>
+
+  <!-- Name -->
+  <text x="500" y="770" text-anchor="middle" class="title" font-size="76" letter-spacing="6" fill="url(#gold)">AUTO GARAGE</text>
+
+  <!-- Divider with flag dots -->
+  <g>
+    <line x1="290" y1="805" x2="470" y2="805" stroke="url(#goldH)" stroke-width="2"/>
+    <line x1="530" y1="805" x2="710" y2="805" stroke="url(#goldH)" stroke-width="2"/>
+    <circle cx="487" cy="805" r="7" fill="#D52B1E" stroke="url(#gold)" stroke-width="2"/>
+    <circle cx="513" cy="805" r="7" fill="#244AA5" stroke="url(#gold)" stroke-width="2"/>
+  </g>
+
+  <text x="500" y="850" text-anchor="middle" class="sub" font-size="22" letter-spacing="9" fill="#E9C66A">SWITZERLAND · KOSOVA</text>
+  <text x="500" y="890" text-anchor="middle" class="sub" font-size="15" letter-spacing="6" fill="#E9C66A" fill-opacity="0.7">PREMIUM CAR SERVICE</text>
+</svg>
