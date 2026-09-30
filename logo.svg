@@ -1,64 +1,98 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
   <!-- Garage Ahmeti Mécanique
-       Indirect symbolism: the "A" is an Alpine peak (Switzerland) with a Swiss
-       plus as its crossbar; six stars above it recall Kosovo; the road line
-       below turns into a car silhouette (the garage). -->
+       Symbolism without flags: the Alps (Switzerland) under six stars (Kosovo),
+       a small red cross as the crest, and a sports car on the road home. -->
   <defs>
     <style>
       @font-face { font-family: 'Montserrat'; font-weight: 300 600; src: url(data:font/woff2;base64,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) format('woff2'); }
       text { font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; }
     </style>
+    <linearGradient id="mtn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8A8A90"/>
+      <stop offset="1" stop-color="#2A2A2E"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <path id="shield" d="M330,160 H670 V360 Q670,500 500,585 Q330,500 330,360 Z"/>
+    <clipPath id="inside"><use href="#shield" transform="translate(500,370) scale(0.93) translate(-500,-370)"/></clipPath>
   </defs>
 
   <rect width="1000" height="1000" fill="#0B0B0C"/>
 
-  <!-- Six stars -->
-  <g fill="#FFFFFF">
-    <polygon points="400.0,180.0 402.2,185.9 408.6,186.2 403.6,190.2 405.3,196.3 400.0,192.8 394.7,196.3 396.4,190.2 391.4,186.2 397.8,185.9"/>
-    <polygon points="440.0,164.6 442.2,170.6 448.6,170.9 443.6,174.8 445.3,180.9 440.0,177.4 434.7,180.9 436.4,174.8 431.4,170.9 437.8,170.6"/>
-    <polygon points="480.0,157.0 482.2,162.9 488.6,163.2 483.6,167.1 485.3,173.2 480.0,169.7 474.7,173.2 476.4,167.1 471.4,163.2 477.8,162.9"/>
-    <polygon points="520.0,157.0 522.2,162.9 528.6,163.2 523.6,167.1 525.3,173.2 520.0,169.7 514.7,173.2 516.4,167.1 511.4,163.2 517.8,162.9"/>
-    <polygon points="560.0,164.6 562.2,170.6 568.6,170.9 563.6,174.8 565.3,180.9 560.0,177.4 554.7,180.9 556.4,174.8 551.4,170.9 557.8,170.6"/>
-    <polygon points="600.0,180.0 602.2,185.9 608.6,186.2 603.6,190.2 605.3,196.3 600.0,192.8 594.7,196.3 596.4,190.2 591.4,186.2 597.8,185.9"/>
+  <!-- Scene inside the shield -->
+  <g clip-path="url(#inside)">
+    <g fill="#FFFFFF">
+    <polygon points="418.0,221.0 419.7,225.6 424.7,225.8 420.8,228.9 422.1,233.7 418.0,230.9 413.9,233.7 415.2,228.9 411.3,225.8 416.3,225.6"/>
+    <polygon points="450.8,210.8 452.5,215.4 457.5,215.6 453.6,218.7 454.9,223.4 450.8,220.7 446.7,223.4 448.0,218.7 444.1,215.6 449.1,215.4"/>
+    <polygon points="483.6,205.6 485.3,210.3 490.3,210.5 486.4,213.5 487.7,218.3 483.6,215.6 479.5,218.3 480.8,213.5 476.9,210.5 481.9,210.3"/>
+    <polygon points="516.4,205.6 518.1,210.3 523.1,210.5 519.2,213.5 520.5,218.3 516.4,215.6 512.3,218.3 513.6,213.5 509.7,210.5 514.7,210.3"/>
+    <polygon points="549.2,210.8 550.9,215.4 555.9,215.6 552.0,218.7 553.3,223.4 549.2,220.7 545.1,223.4 546.4,218.7 542.5,215.6 547.5,215.4"/>
+    <polygon points="582.0,221.0 583.7,225.6 588.7,225.8 584.8,228.9 586.1,233.7 582.0,230.9 577.9,233.7 579.2,228.9 575.3,225.8 580.3,225.6"/>
+    </g>
+
+    <!-- Alps -->
+    <g transform="translate(20,0)">
+      <clipPath id="mtnClip"><path d="M300,470 L300,420 L400,330 L430,355 L480,268 L560,380 L600,330 L700,420 L700,470 Q610,500 510,452 Q420,420 300,470 Z"/></clipPath>
+      <path fill="url(#mtn)" d="M300,470 L300,420 L400,330 L430,355 L480,268 L560,380 L600,330 L700,420 L700,470 Q610,500 510,452 Q420,420 300,470 Z" stroke="none" stroke-width="2" stroke-linejoin="round"/>
+      <!-- shadowed faces -->
+      <g clip-path="url(#mtnClip)">
+      <path fill="#0B0B0C" fill-opacity="0.28" d="M480,268 L560,380 L540,480 L505,480 L492,360 Z"/>
+      <path fill="#0B0B0C" fill-opacity="0.28" d="M600,330 L700,420 L700,480 L640,480 L612,380 Z"/>
+      <path fill="#0B0B0C" fill-opacity="0.28" d="M400,330 L430,355 L440,480 L420,480 L408,370 Z"/>
+      </g>
+      <!-- snow caps -->
+      <g fill="#FFFFFF">
+        <path d="M480,268 L510,310 L498,304 L489,318 L478,302 L468,312 L458,306 Z"/>
+        <path d="M600,330 L619,352 L609,348 L601,358 L593,347 L582,352 Z"/>
+        <path d="M400,330 L421,348 L412,346 L404,354 L396,345 L385,350 Z"/>
+      </g>
+    </g>
+
+    <!-- Winding road -->
+    <path fill="url(#road)" d="M512,432 C500,455 450,470 448,505 C446,535 478,555 462,610 L572,610 C572,560 510,545 500,510 C490,475 520,455 524,432 Z"/>
+    <path fill="none" stroke="#0B0B0C" stroke-width="3" stroke-dasharray="7 7"
+          d="M518,436 C510,458 468,472 474,507 C480,540 522,552 518,610"/>
   </g>
 
-  <g transform="translate(0,20)">
-  <!-- "A" as an Alpine peak, legs cut flat -->
-  <defs><clipPath id="cut"><rect x="0" y="0" width="1000" height="452"/></clipPath></defs>
-  <path d="M362,500 L500,200 L638,500" fill="none" stroke="#FFFFFF" stroke-width="30" stroke-linejoin="miter" stroke-miterlimit="10" clip-path="url(#cut)"/>
+  <!-- Shield frame -->
+  <use href="#shield" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="round"/>
+  <use href="#shield" fill="none" stroke="#FFFFFF" stroke-width="1.5" transform="translate(500,370) scale(0.93) translate(-500,-370)"/>
 
-  <!-- Swiss plus as the A's crossbar -->
-  <g fill="#C8102E">
-    <rect x="474" y="372" width="52" height="16"/>
-    <rect x="492" y="354" width="16" height="52"/>
+  <!-- Red cross crest, cut into the frame -->
+  <g fill="#C8102E" stroke="#0B0B0C" stroke-width="8" paint-order="stroke">
+    <path d="M492,140 H508 V152 H520 V168 H508 V180 H492 V168 H480 V152 H492 Z"/>
   </g>
 
-  <!-- Road line that becomes a sports car -->
-  <path d="M170,560 H268
-           C268,540 284,532 322,527 L398,519
-           C440,493 482,482 532,482
-           C578,482 610,494 646,514
-           C694,520 724,530 730,548 L732,560 H830"
-        fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- side window -->
-  <path d="M432,515 C462,500 494,494 532,494 C566,494 592,502 616,515 Z"
-        fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
-  <g fill="#0B0B0C" stroke="#FFFFFF" stroke-width="7">
-    <circle cx="362" cy="560" r="25"/>
-    <circle cx="640" cy="560" r="25"/>
+  <!-- Speed lines -->
+  <g stroke="#FFFFFF" stroke-linecap="round">
+    <line x1="200" y1="590" x2="272" y2="590" stroke-width="4"/>
+    <line x1="228" y1="604" x2="278" y2="604" stroke-width="4"/>
+    <line x1="252" y1="618" x2="282" y2="618" stroke-width="4"/>
   </g>
-  <g fill="#FFFFFF">
-    <circle cx="362" cy="560" r="6"/>
-    <circle cx="640" cy="560" r="6"/>
+
+  <!-- Sports car breaking out of the shield -->
+  <path d="M292,612 C292,596 300,588 330,584 L390,576 C430,552 470,540 520,538 C575,536 610,548 648,570 C690,574 712,584 716,598 L718,612 C718,618 714,620 708,620 L668,620 A29,29 0 0 0 610,620 L400,620 A29,29 0 0 0 342,620 L300,620 C294,620 292,617 292,612 Z" fill="#FFFFFF" stroke="#0B0B0C" stroke-width="10" stroke-linejoin="round" paint-order="stroke"/>
+  <g fill="#0B0B0C">
+    <path d="M404,574 C440,556 472,550 512,549 L512,574 Z"/>
+    <path d="M522,549 C566,549 594,558 620,572 L622,574 L522,574 Z"/>
   </g>
+  <path d="M312,598 C450,592 600,592 704,598" fill="none" stroke="#C8102E" stroke-width="3.5" stroke-linecap="round"/>
+  <g>
+    <circle cx="371" cy="620" r="24" fill="#0B0B0C" stroke="#FFFFFF" stroke-width="5"/>
+    <circle cx="371" cy="620" r="12" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+    <circle cx="371" cy="620" r="4" fill="#FFFFFF"/>
+    <circle cx="639" cy="620" r="24" fill="#0B0B0C" stroke="#FFFFFF" stroke-width="5"/>
+    <circle cx="639" cy="620" r="12" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+    <circle cx="639" cy="620" r="4" fill="#FFFFFF"/>
   </g>
+  <line x1="300" y1="650" x2="720" y2="650" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
 
   <!-- Name -->
-  <text x="500" y="725" text-anchor="middle" font-size="104" font-weight="600" letter-spacing="30" fill="#FFFFFF" dx="15">AHMETI</text>
-
-  <line x1="250" y1="777" x2="468" y2="777" stroke="#FFFFFF" stroke-width="1.5"/>
-  <rect x="493" y="770" width="14" height="14" fill="#C8102E" transform="rotate(45 500 777)"/>
-  <line x1="532" y1="777" x2="750" y2="777" stroke="#FFFFFF" stroke-width="1.5"/>
-
-  <text x="500" y="837" text-anchor="middle" font-size="26" font-weight="300" letter-spacing="13" fill="#FFFFFF" dx="6.5">GARAGE · MÉCANIQUE</text>
+  <text x="500" y="760" text-anchor="middle" font-size="96" font-weight="600" letter-spacing="28" dx="14" fill="#FFFFFF">AHMETI</text>
+  <line x1="260" y1="805" x2="470" y2="805" stroke="#FFFFFF" stroke-width="1.5"/>
+  <rect x="493" y="798" width="14" height="14" fill="#C8102E" transform="rotate(45 500 805)"/>
+  <line x1="530" y1="805" x2="740" y2="805" stroke="#FFFFFF" stroke-width="1.5"/>
+  <text x="500" y="860" text-anchor="middle" font-size="25" font-weight="300" letter-spacing="12" dx="6" fill="#FFFFFF">GARAGE · MÉCANIQUE</text>
 </svg>
