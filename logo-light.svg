@@ -10,10 +10,10 @@
     </style>
   </defs>
 
-  <rect width="1000" height="1000" fill="#0B0B0C"/>
+  <rect width="1000" height="1000" fill="#FFFFFF"/>
 
   <!-- Six stars -->
-  <g fill="#FFFFFF">
+  <g fill="#0B0B0C">
     <polygon points="400.0,180.0 402.2,185.9 408.6,186.2 403.6,190.2 405.3,196.3 400.0,192.8 394.7,196.3 396.4,190.2 391.4,186.2 397.8,185.9"/>
     <polygon points="440.0,164.6 442.2,170.6 448.6,170.9 443.6,174.8 445.3,180.9 440.0,177.4 434.7,180.9 436.4,174.8 431.4,170.9 437.8,170.6"/>
     <polygon points="480.0,157.0 482.2,162.9 488.6,163.2 483.6,167.1 485.3,173.2 480.0,169.7 474.7,173.2 476.4,167.1 471.4,163.2 477.8,162.9"/>
@@ -25,7 +25,7 @@
   <g transform="translate(0,20)">
   <!-- "A" as an Alpine peak, legs cut flat -->
   <defs><clipPath id="cut"><rect x="0" y="0" width="1000" height="452"/></clipPath></defs>
-  <path d="M362,500 L500,200 L638,500" fill="none" stroke="#FFFFFF" stroke-width="30" stroke-linejoin="miter" stroke-miterlimit="10" clip-path="url(#cut)"/>
+  <path d="M362,500 L500,200 L638,500" fill="none" stroke="#0B0B0C" stroke-width="30" stroke-linejoin="miter" stroke-miterlimit="10" clip-path="url(#cut)"/>
 
   <!-- Swiss plus as the A's crossbar -->
   <g fill="#C8102E">
@@ -39,26 +39,26 @@
            C440,493 482,482 532,482
            C578,482 610,494 646,514
            C694,520 724,530 730,548 L732,560 H830"
-        fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        fill="none" stroke="#0B0B0C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
   <!-- side window -->
   <path d="M432,515 C462,500 494,494 532,494 C566,494 592,502 616,515 Z"
-        fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/>
-  <g fill="#0B0B0C" stroke="#FFFFFF" stroke-width="7">
+        fill="none" stroke="#0B0B0C" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#FFFFFF" stroke="#0B0B0C" stroke-width="7">
     <circle cx="362" cy="560" r="25"/>
     <circle cx="640" cy="560" r="25"/>
   </g>
-  <g fill="#FFFFFF">
+  <g fill="#0B0B0C">
     <circle cx="362" cy="560" r="6"/>
     <circle cx="640" cy="560" r="6"/>
   </g>
   </g>
 
   <!-- Name -->
-  <text x="500" y="725" text-anchor="middle" font-size="104" font-weight="600" letter-spacing="30" fill="#FFFFFF" dx="15">AHMETI</text>
+  <text x="500" y="725" text-anchor="middle" font-size="104" font-weight="600" letter-spacing="30" fill="#0B0B0C" dx="15">AHMETI</text>
 
-  <line x1="250" y1="777" x2="468" y2="777" stroke="#FFFFFF" stroke-width="1.5"/>
+  <line x1="250" y1="777" x2="468" y2="777" stroke="#0B0B0C" stroke-width="1.5"/>
   <rect x="493" y="770" width="14" height="14" fill="#C8102E" transform="rotate(45 500 777)"/>
-  <line x1="532" y1="777" x2="750" y2="777" stroke="#FFFFFF" stroke-width="1.5"/>
+  <line x1="532" y1="777" x2="750" y2="777" stroke="#0B0B0C" stroke-width="1.5"/>
 
-  <text x="500" y="837" text-anchor="middle" font-size="26" font-weight="300" letter-spacing="13" fill="#FFFFFF" dx="6.5">GARAGE · MÉCANIQUE</text>
+  <text x="500" y="837" text-anchor="middle" font-size="26" font-weight="300" letter-spacing="13" fill="#0B0B0C" dx="6.5">GARAGE · MÉCANIQUE</text>
 </svg>
