@@ -1,5 +1,5 @@
 <title>Garage Ahmeti Mécanique</title>
-<meta name="description" content="Garage Ahmeti Mécanique — entretien, diagnostic et réparation toutes marques en Suisse.">
+<meta name="description" content="Garage Ahmeti Mécanique SARL à Bex : réparation et entretien de voitures, motos et camions, carrosserie et peinture.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap">
@@ -152,7 +152,14 @@ h2 { font-family: var(--display); font-weight: 500; font-size: clamp(38px, 4.8vw
 .info div { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 22px 0; border-bottom: 1px solid var(--line); min-width: 0; }
 .info dt { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
 .info dd { margin: 0; font-size: 19px; min-width: 0; overflow-wrap: anywhere; }
-.info .hours { font-variant-numeric: tabular-nums; }
+.hours-t { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; font-size: 17px; }
+.hours-t td { padding: 5px 0; color: var(--muted); vertical-align: top; }
+.hours-t td:last-child { text-align: right; padding-left: 16px; }
+.hours-t tr.today td { color: var(--fg); font-weight: 600; }
+.hours-t tr.today td:first-child::before { content: ""; display: inline-block; width: 7px; height: 7px; background: var(--red); transform: rotate(45deg); margin-right: 10px; vertical-align: middle; }
+.info a { text-decoration: none; border-bottom: 1px solid var(--line); }
+.info a:hover { border-bottom-color: var(--fg); }
+.info a.more { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: inline-block; margin-top: 8px; }
 .copy { background: none; border: 1px solid var(--line); color: var(--muted); font: 500 11px var(--sans); letter-spacing: .14em; text-transform: uppercase; padding: 6px 10px; margin-left: 10px; cursor: pointer; vertical-align: middle; }
 .copy:hover { color: var(--fg); border-color: var(--fg); }
 
@@ -241,9 +248,9 @@ footer small { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
 <header class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="eyebrow"><span data-i18n="eyebrow">Garage · Mécanique · Suisse</span></p>
+      <p class="eyebrow"><span data-i18n="eyebrow">Garage · Mécanique · Bex</span></p>
       <h1 data-i18n="h1">Votre voiture, entre des mains <em>de précision.</em></h1>
-      <p class="lead" data-i18n="lead">Entretien, diagnostic et réparation toutes marques. Un devis clair avant chaque travail, et une voiture rendue propre et prête à rouler.</p>
+      <p class="lead" data-i18n="lead">Réparation et entretien de voitures, motos et camions à Bex. Une équipe de mécaniciens qualifiés, un service rapide et soigné.</p>
       <div class="hero-cta">
         <a class="btn btn-red" href="#contact" data-i18n="ctaBook">Prendre rendez-vous</a>
         <a class="btn" href="#services" data-i18n="ctaServices">Nos services</a>
@@ -279,9 +286,9 @@ footer small { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
   </div>
   <div class="promise">
     <ul class="promise-list">
-      <li><div><strong data-i18n="p1t">Toutes marques</strong><span data-i18n="p1d">Citadines, SUV, utilitaires et sportives.</span></div></li>
-      <li><div><strong data-i18n="p2t">Devis avant travaux</strong><span data-i18n="p2d">Vous validez le prix avant qu'on commence.</span></div></li>
-      <li><div><strong data-i18n="p3t">Travail soigné</strong><span data-i18n="p3d">Pièces de qualité et contrôle final.</span></div></li>
+      <li><div><strong data-i18n="p1t">Tous véhicules</strong><span data-i18n="p1d">Voitures, motos et camions.</span></div></li>
+      <li><div><strong data-i18n="p2t">Mécaniciens qualifiés</strong><span data-i18n="p2d">Une équipe expérimentée à votre service.</span></div></li>
+      <li><div><strong data-i18n="p3t">Parking privé</strong><span data-i18n="p3d">Accès facile en voiture, bus ou train.</span></div></li>
     </ul>
   </div>
 </header>
@@ -292,40 +299,40 @@ footer small { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
       <div class="head">
         <div>
           <p class="kicker" data-i18n="svcKicker">Services</p>
-          <h2 data-i18n="svcTitle">Tout ce dont votre voiture a besoin, sous un même toit.</h2>
+          <h2 data-i18n="svcTitle">Voitures, motos et camions.</h2>
         </div>
-        <p data-i18n="svcIntro">Du simple service annuel à la réparation complète, chaque voiture est traitée avec le même soin.</p>
+        <p data-i18n="svcIntro">Réparation et entretien de tous types de véhicules, avec tout le nécessaire pour les garder en parfait état.</p>
       </div>
       <div class="services">
         <article class="svc">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 6a9 9 0 0 0-8.5 12L7 32.5a3.5 3.5 0 0 0 5 5L26.5 23A9 9 0 0 0 38 14.5l-5.5 5.5-5-1-1-5L32 8.5A9 9 0 0 0 30 6Z"/></svg>
-          <h3 data-i18n="s1t">Entretien &amp; service</h3>
-          <p data-i18n="s1d">Vidange, filtres, bougies et contrôles selon le carnet du constructeur.</p>
+          <h3 data-i18n="s1t">Entretien &amp; vidange</h3>
+          <p data-i18n="s1d">Vidange, filtres et contrôles réguliers pour un véhicule en parfait état.</p>
         </article>
         <article class="svc">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 32a16 16 0 1 1 32 0"/><path d="M24 32l8-11"/><circle cx="24" cy="32" r="2.5"/><path d="M12 32h2M34 32h2M24 16v2M15 21l1.5 1.5"/></svg>
-          <h3 data-i18n="s2t">Diagnostic électronique</h3>
-          <p data-i18n="s2d">Lecture des codes défaut et recherche de panne, voyant moteur compris.</p>
+          <h3 data-i18n="s2t">Réparation mécanique</h3>
+          <p data-i18n="s2d">Diagnostic et réparation par des mécaniciens qualifiés et expérimentés.</p>
         </article>
         <article class="svc">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="6"/><path d="M33 9.5c4 2.5 6.5 6.5 7.5 10.5" stroke-linecap="round"/><circle cx="24" cy="12" r="1.2"/><circle cx="36" cy="24" r="1.2"/><circle cx="24" cy="36" r="1.2"/><circle cx="12" cy="24" r="1.2"/></svg>
-          <h3 data-i18n="s3t">Freins &amp; suspension</h3>
-          <p data-i18n="s3d">Plaquettes, disques, amortisseurs et direction, pour rouler en sécurité.</p>
+          <h3 data-i18n="s3t">Freins</h3>
+          <p data-i18n="s3d">Plaquettes, disques et contrôle complet du freinage.</p>
         </article>
         <article class="svc">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="9"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11.3 11.3l4.2 4.2M32.5 32.5l4.2 4.2M11.3 36.7l4.2-4.2M32.5 15.5l4.2-4.2" stroke-linecap="round"/></svg>
-          <h3 data-i18n="s4t">Pneus &amp; géométrie</h3>
-          <p data-i18n="s4d">Changement été / hiver, équilibrage, stockage et réglage du parallélisme.</p>
+          <h3 data-i18n="s4t">Pneus</h3>
+          <p data-i18n="s4d">Réparation, changement et montage de pneus.</p>
         </article>
         <article class="svc">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M24 5v38M7.5 14.5l33 19M7.5 33.5l33-19"/><path d="M19 8l5 4 5-4M19 40l5-4 5 4M8 20l6-1-2-6M40 28l-6 1 2 6M8 28l6 1-2 6M40 20l-6-1 2-6"/></svg>
-          <h3 data-i18n="s5t">Climatisation</h3>
-          <p data-i18n="s5d">Recharge, contrôle d'étanchéité et désinfection du circuit.</p>
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 6C18 15 13 21 13 28a11 11 0 0 0 22 0c0-7-5-13-11-22Z"/><path d="M18.5 29a5.5 5.5 0 0 0 5 5"/></svg>
+          <h3 data-i18n="s5t">Carrosserie &amp; peinture</h3>
+          <p data-i18n="s5d">Notre atelier de carrosserie répare et repeint votre véhicule.</p>
         </article>
         <article class="svc">
           <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="8" width="28" height="34"/><path d="M18 8V5h12v3"/><path d="M16 22l4 4 8-8"/><path d="M16 33h16"/></svg>
-          <h3 data-i18n="s6t">Préparation à l'expertise</h3>
-          <p data-i18n="s6d">Contrôle complet et remise en conformité avant le passage au service des automobiles.</p>
+          <h3 data-i18n="s6t">Contrôle technique</h3>
+          <p data-i18n="s6d">Contrôle et préparation de votre véhicule pour l'expertise.</p>
         </article>
       </div>
     </div>
@@ -338,13 +345,13 @@ footer small { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
           <p class="kicker" data-i18n="prKicker">Déroulement</p>
           <h2 data-i18n="prTitle">Simple, clair, sans surprise.</h2>
         </div>
-        <p data-i18n="prIntro">Vous savez à chaque étape ce qui est fait sur votre voiture, et combien cela coûte.</p>
+        <p data-i18n="prIntro">Un rendez-vous, un conseil ou une réparation : nous faisons le nécessaire le plus rapidement possible.</p>
       </div>
       <ol class="steps">
-        <li><h3 data-i18n="st1t">Rendez-vous</h3><p data-i18n="st1d">Par téléphone, WhatsApp ou le formulaire ci-dessous.</p></li>
-        <li><h3 data-i18n="st2t">Diagnostic &amp; devis</h3><p data-i18n="st2d">On contrôle la voiture et on vous explique le prix avant de commencer.</p></li>
-        <li><h3 data-i18n="st3t">Travaux</h3><p data-i18n="st3d">Réparation soignée, avec des pièces de qualité.</p></li>
-        <li><h3 data-i18n="st4t">Restitution</h3><p data-i18n="st4d">Essai, contrôle final, et une voiture rendue propre.</p></li>
+        <li><h3 data-i18n="st1t">Rendez-vous</h3><p data-i18n="st1d">Par téléphone, WhatsApp, e-mail ou le formulaire ci-dessous.</p></li>
+        <li><h3 data-i18n="st2t">Diagnostic &amp; conseil</h3><p data-i18n="st2d">Nous contrôlons le véhicule et vous conseillons sur les travaux à faire.</p></li>
+        <li><h3 data-i18n="st3t">Travaux</h3><p data-i18n="st3d">Réparation soignée par nos mécaniciens qualifiés.</p></li>
+        <li><h3 data-i18n="st4t">Restitution</h3><p data-i18n="st4d">Contrôle final, et votre véhicule rendu en parfait état.</p></li>
       </ol>
     </div>
   </section>
@@ -370,7 +377,7 @@ footer small { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
       <div>
         <p class="kicker" data-i18n="hsKicker">Notre histoire</p>
         <h2 data-i18n="hsTitle">Deux pays, un seul standard.</h2>
-        <p class="body" data-i18n="hsBody">Garage Ahmeti Mécanique est une affaire de famille. Nos racines sont au Kosovo, notre atelier est en Suisse. Nous travaillons avec la rigueur suisse et l'accueil chaleureux de chez nous : on prend le temps d'expliquer, et on traite chaque voiture comme si c'était la nôtre.</p>
+        <p class="body" data-i18n="hsBody">Garage Ahmeti Mécanique SARL est un garage familial installé à Bex. Nos racines sont au Kosovo, notre atelier est en Suisse. Nous travaillons avec la rigueur suisse et l'accueil chaleureux de chez nous, et nous traitons chaque véhicule comme si c'était le nôtre.</p>
         <p class="quote" data-i18n="hsQuote">« Une voiture bien entretenue, c'est une famille qui rentre en sécurité. »</p>
       </div>
     </div>
@@ -380,12 +387,24 @@ footer small { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
     <div class="wrap">
       <div>
         <p class="kicker" data-i18n="ctKicker">Contact</p>
-        <h2 data-i18n="ctTitle">Prenez rendez-vous.</h2>
+        <h2 data-i18n="ctTitle">Contactez-nous.</h2>
         <dl class="info">
-          <div><dt data-i18n="ctPhone">Téléphone</dt><dd><span id="phone">+41 XX XXX XX XX</span><button class="copy" type="button" data-copy="phone" data-i18n="copy">Copier</button></dd></div>
-          <div><dt data-i18n="ctAddr">Adresse</dt><dd>Rue et numéro<br>NPA Ville, Suisse</dd></div>
-          <div><dt data-i18n="ctHours">Horaires</dt><dd class="hours"><span data-i18n="h1d">Lun – Ven</span> 07:30 – 12:00 · 13:30 – 18:00<br><span data-i18n="h2d">Samedi sur rendez-vous</span></dd></div>
-          <div><dt data-i18n="ctLang">Langues</dt><dd>Français · Deutsch · Shqip · English</dd></div>
+          <div><dt data-i18n="ctAddr">Adresse</dt><dd>Route de Monthey 2<br>1880 Bex, Suisse<br><a class="more" href="https://www.google.com/maps/search/?api=1&amp;query=Route+de+Monthey+2%2C+1880+Bex" target="_blank" rel="noopener" data-i18n="route">Itinéraire</a></dd></div>
+          <div><dt data-i18n="ctPhone">Téléphone</dt><dd><a id="phone" href="tel:+41786350780">+41 78 635 07 80</a><button class="copy" type="button" data-copy="phone" data-i18n="copy">Copier</button></dd></div>
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/41786350780" target="_blank" rel="noopener">+41 78 635 07 80</a></dd></div>
+          <div><dt data-i18n="ctMail">E-mail</dt><dd><span id="email">info@garage-ahmeti-mecanique-sarl.ch</span><button class="copy" type="button" data-copy="email" data-i18n="copy">Copier</button></dd></div>
+          <div><dt data-i18n="ctAccess">Accès</dt><dd data-i18n="accessTxt">Parking privé · en voiture, bus ou train</dd></div>
+          <div><dt data-i18n="ctHours">Horaires</dt><dd>
+            <table class="hours-t"><tbody>
+              <tr data-day="1"><td data-i18n="d1">Lundi</td><td>08:00 – 12:00 · 13:00 – 18:00</td></tr>
+              <tr data-day="2"><td data-i18n="d2">Mardi</td><td>08:00 – 12:00 · 13:00 – 18:00</td></tr>
+              <tr data-day="3"><td data-i18n="d3">Mercredi</td><td>08:00 – 12:00 · 13:00 – 18:00</td></tr>
+              <tr data-day="4"><td data-i18n="d4">Jeudi</td><td>08:00 – 12:00 · 13:00 – 18:00</td></tr>
+              <tr data-day="5"><td data-i18n="d5">Vendredi</td><td>08:00 – 12:00 · 13:00 – 18:00</td></tr>
+              <tr data-day="6"><td data-i18n="d6">Samedi</td><td>09:00 – 17:00</td></tr>
+              <tr data-day="0"><td data-i18n="d0">Dimanche</td><td><span data-i18n="closed">Fermé</span></td></tr>
+            </tbody></table>
+          </dd></div>
         </dl>
       </div>
 
@@ -402,12 +421,12 @@ footer small { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
         <div class="field">
           <label for="f-svc" data-i18n="fSvc">Service</label>
           <select id="f-svc" name="svc">
-            <option data-i18n="s1t">Entretien &amp; service</option>
-            <option data-i18n="s2t">Diagnostic électronique</option>
-            <option data-i18n="s3t">Freins &amp; suspension</option>
-            <option data-i18n="s4t">Pneus &amp; géométrie</option>
-            <option data-i18n="s5t">Climatisation</option>
-            <option data-i18n="s6t">Préparation à l'expertise</option>
+            <option data-i18n="s1t">Entretien &amp; vidange</option>
+            <option data-i18n="s2t">Réparation mécanique</option>
+            <option data-i18n="s3t">Freins</option>
+            <option data-i18n="s4t">Pneus</option>
+            <option data-i18n="s5t">Carrosserie &amp; peinture</option>
+            <option data-i18n="s6t">Contrôle technique</option>
             <option data-i18n="fOther">Autre</option>
           </select>
         </div>
@@ -437,79 +456,103 @@ footer small { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
       </svg>
       <span><span class="brand-name">AHMETI</span><span class="brand-sub" data-i18n="brandSub">GARAGE · MÉCANIQUE</span></span>
     </a>
-    <small>© 2026 Garage Ahmeti Mécanique</small>
+    <small>© 2026 Garage Ahmeti Mécanique SARL · Route de Monthey 2, 1880 Bex</small>
   </div>
 </footer>
 
 <script>
 (function () {
   // WhatsApp number in international format without "+" or spaces, e.g. "41791234567".
-  var WHATSAPP = "41000000000";
+  var WHATSAPP = "41786350780";
 
   var T = {
     en: {
       brandSub: "GARAGE · MECHANICS", navServices: "Services", navProcess: "How it works", navStory: "Our story", navContact: "Contact", navCta: "Book",
-      eyebrow: "Garage · Mechanics · Switzerland",
+      eyebrow: "Garage · Mechanics · Bex",
       h1: "Your car, in <em>precise hands.</em>",
-      lead: "Servicing, diagnostics and repairs for every make. A clear quote before any work, and your car handed back clean and ready to drive.",
+      lead: "Repair and maintenance of cars, motorcycles and trucks in Bex. A team of qualified mechanics, fast and careful service.",
       ctaBook: "Book an appointment", ctaServices: "Our services",
-      p1t: "Every make", p1d: "City cars, SUVs, vans and sports cars.",
-      p2t: "Quote first", p2d: "You approve the price before we start.",
-      p3t: "Careful work", p3d: "Quality parts and a final check.",
-      svcKicker: "Services", svcTitle: "Everything your car needs, under one roof.", svcIntro: "From a simple yearly service to a full repair, every car gets the same care.",
-      s1t: "Servicing", s1d: "Oil, filters, spark plugs and checks by the manufacturer's schedule.",
-      s2t: "Electronic diagnostics", s2d: "Fault-code reading and troubleshooting, engine warning light included.",
-      s3t: "Brakes & suspension", s3d: "Pads, discs, shock absorbers and steering, so you drive safely.",
-      s4t: "Tyres & alignment", s4d: "Summer / winter changeover, balancing, storage and wheel alignment.",
-      s5t: "Air conditioning", s5d: "Recharge, leak test and system disinfection.",
-      s6t: "Inspection preparation", s6d: "Full check and fixes before your vehicle inspection (MFK / expertise).",
-      prKicker: "How it works", prTitle: "Simple, clear, no surprises.", prIntro: "At every step you know what is being done to your car, and what it costs.",
-      st1t: "Appointment", st1d: "By phone, WhatsApp or the form below.",
-      st2t: "Diagnosis & quote", st2d: "We check the car and explain the price before we start.",
-      st3t: "Work", st3d: "Careful repair with quality parts.",
-      st4t: "Hand-over", st4d: "Test drive, final check, and a clean car.",
+      p1t: "Every vehicle", p1d: "Cars, motorcycles and trucks.",
+      p2t: "Qualified mechanics", p2d: "An experienced team at your service.",
+      p3t: "Private car park", p3d: "Easy to reach by car, bus or train.",
+      svcKicker: "Services", svcTitle: "Cars, motorcycles and trucks.", svcIntro: "Repair and maintenance for every type of vehicle, with everything needed to keep it in perfect working order.",
+      s1t: "Servicing & oil change", s1d: "Oil changes, filters and regular checks to keep your vehicle in perfect order.",
+      s2t: "Mechanical repairs", s2d: "Diagnosis and repair by experienced, qualified mechanics.",
+      s3t: "Brakes", s3d: "Pads, discs and a full check of the braking system.",
+      s4t: "Tyres", s4d: "Tyre repair, replacement and fitting.",
+      s5t: "Bodywork & paint", s5d: "Our body shop repairs and repaints your vehicle.",
+      s6t: "Technical inspection", s6d: "We check and prepare your vehicle for its technical inspection.",
+      prKicker: "How it works", prTitle: "Simple, clear, no surprises.", prIntro: "An appointment, advice or a repair: we get it done as soon as possible.",
+      st1t: "Appointment", st1d: "By phone, WhatsApp, email or the form below.",
+      st2t: "Diagnosis & advice", st2d: "We check the vehicle and advise you on the work needed.",
+      st3t: "Work", st3d: "Careful repair by our qualified mechanics.",
+      st4t: "Hand-over", st4d: "Final check, and your vehicle handed back in perfect order.",
       lg1: "The Alps: Switzerland, where we work.", lg2: "Six stars: Kosovo, where the family comes from.", lg3: "The red cross: Swiss precision.",
       hsKicker: "Our story", hsTitle: "Two countries, one standard.",
-      hsBody: "Garage Ahmeti Mécanique is a family business. Our roots are in Kosovo, our workshop is in Switzerland. We work with Swiss rigour and the warm welcome of home: we take the time to explain, and we treat every car as if it were our own.",
+      hsBody: "Garage Ahmeti Mécanique SARL is a family garage based in Bex. Our roots are in Kosovo, our workshop is in Switzerland. We work with Swiss rigour and the warm welcome of home, and we treat every vehicle as if it were our own.",
       hsQuote: "“A well-kept car means a family that gets home safely.”",
-      ctKicker: "Contact", ctTitle: "Book an appointment.", ctPhone: "Phone", ctAddr: "Address", ctHours: "Hours", ctLang: "Languages",
+      ctKicker: "Contact", ctTitle: "Contact us.", ctPhone: "Phone", ctAddr: "Address", ctHours: "Hours", ctLang: "Languages",
       h1d: "Mon – Fri", h2d: "Saturday by appointment", copy: "Copy",
       fTitle: "Appointment request", fName: "Name", fTel: "Phone", fCar: "Car (make, model)", fCarPh: "e.g. VW Golf 2019", fDate: "Preferred date",
       fSvc: "Service", fOther: "Other", fMsg: "Message", fMsgPh: "Describe the problem in a few words.",
       fErr: "Please enter your name and phone number.", fSend: "Prepare my request", fWa: "Send via WhatsApp", fCopy: "Copy message",
-      sumHead: "Appointment request", sumName: "Name", sumTel: "Phone", sumCar: "Car", sumDate: "Date", sumSvc: "Service", sumMsg: "Message", copied: "Copied"
+      sumHead: "Appointment request", sumName: "Name", sumTel: "Phone", sumCar: "Car", sumDate: "Date", sumSvc: "Service", sumMsg: "Message", copied: "Copied",
+      ctMail: "Email",
+      ctAccess: "Access",
+      accessTxt: "Private car park · by car, bus or train",
+      route: "Directions",
+      d1: "Monday",
+      d2: "Tuesday",
+      d3: "Wednesday",
+      d4: "Thursday",
+      d5: "Friday",
+      d6: "Saturday",
+      d0: "Sunday",
+      closed: "Closed"
     },
     sq: {
       brandSub: "GARAZH · MEKANIKË", navServices: "Shërbimet", navProcess: "Si punojmë", navStory: "Historia jonë", navContact: "Kontakt", navCta: "Termin",
-      eyebrow: "Garazh · Mekanikë · Zvicër",
+      eyebrow: "Garazh · Mekanikë · Bex",
       h1: "Vetura juaj, në <em>duar të sigurta.</em>",
-      lead: "Servisim, diagnostikë dhe riparim për të gjitha markat. Ofertë e qartë para çdo pune, dhe vetura ju kthehet e pastër dhe gati për rrugë.",
+      lead: "Riparim dhe mirëmbajtje e veturave, motoçikletave dhe kamionëve në Bex. Ekip mekanikësh të kualifikuar, shërbim i shpejtë dhe i kujdesshëm.",
       ctaBook: "Rezervo termin", ctaServices: "Shërbimet tona",
-      p1t: "Të gjitha markat", p1d: "Vetura qyteti, SUV, furgonë dhe sportive.",
-      p2t: "Ofertë para punës", p2d: "Ju e aprovoni çmimin para se të fillojmë.",
-      p3t: "Punë e kujdesshme", p3d: "Pjesë cilësore dhe kontroll përfundimtar.",
-      svcKicker: "Shërbimet", svcTitle: "Gjithçka që i duhet veturës suaj, në një vend.", svcIntro: "Nga servisi vjetor deri te riparimi i plotë, çdo veturë trajtohet me të njëjtin kujdes.",
-      s1t: "Servisim", s1d: "Vaj, filtra, kandela dhe kontrolle sipas planit të prodhuesit.",
-      s2t: "Diagnostikë elektronike", s2d: "Leximi i kodeve të gabimit dhe gjetja e defektit, edhe drita e motorit.",
-      s3t: "Frenat & amortizatorët", s3d: "Pllaka, disqe, amortizatorë dhe drejtim, për vozitje të sigurt.",
-      s4t: "Gomat & gjeometria", s4d: "Ndërrimi verë / dimër, balancimi, ruajtja dhe rregullimi i gjeometrisë.",
-      s5t: "Klima", s5d: "Mbushje, kontroll i rrjedhjeve dhe dezinfektim i sistemit.",
-      s6t: "Përgatitje për ekspertizë", s6d: "Kontroll i plotë dhe riparime para kontrollit teknik (MFK / expertise).",
-      prKicker: "Si punojmë", prTitle: "E thjeshtë, e qartë, pa surpriza.", prIntro: "Në çdo hap e dini çfarë bëhet në veturën tuaj dhe sa kushton.",
-      st1t: "Termini", st1d: "Me telefon, WhatsApp ose me formularin më poshtë.",
-      st2t: "Diagnostikë & ofertë", st2d: "E kontrollojmë veturën dhe jua shpjegojmë çmimin para se të fillojmë.",
-      st3t: "Punimet", st3d: "Riparim i kujdesshëm me pjesë cilësore.",
-      st4t: "Dorëzimi", st4d: "Provë, kontroll përfundimtar dhe veturë e pastër.",
+      p1t: "Çdo mjet", p1d: "Vetura, motoçikleta dhe kamionë.",
+      p2t: "Mekanikë të kualifikuar", p2d: "Një ekip me përvojë në shërbimin tuaj.",
+      p3t: "Parking privat", p3d: "Qasje e lehtë me veturë, autobus ose tren.",
+      svcKicker: "Shërbimet", svcTitle: "Vetura, motoçikleta dhe kamionë.", svcIntro: "Riparim dhe mirëmbajtje për çdo lloj mjeti, me gjithçka që duhet për ta mbajtur në gjendje të përsosur.",
+      s1t: "Servisim & ndërrim vaji", s1d: "Ndërrim vaji, filtra dhe kontrolle të rregullta për një mjet në gjendje të përsosur.",
+      s2t: "Riparime mekanike", s2d: "Diagnostikim dhe riparim nga mekanikë me përvojë dhe të kualifikuar.",
+      s3t: "Frenat", s3d: "Pllaka, disqe dhe kontroll i plotë i frenave.",
+      s4t: "Gomat", s4d: "Riparim, ndërrim dhe montim i gomave.",
+      s5t: "Karroceri & ngjyrosje", s5d: "Punëtoria jonë e karrocerisë e riparon dhe e ngjyros mjetin tuaj.",
+      s6t: "Kontrolli teknik", s6d: "Kontrollojmë dhe përgatisim mjetin tuaj për kontrollin teknik.",
+      prKicker: "Si punojmë", prTitle: "E thjeshtë, e qartë, pa surpriza.", prIntro: "Termin, këshillë apo riparim: e bëjmë sa më shpejt të jetë e mundur.",
+      st1t: "Termini", st1d: "Me telefon, WhatsApp, e-mail ose me formularin më poshtë.",
+      st2t: "Diagnostikim & këshillë", st2d: "E kontrollojmë mjetin dhe ju këshillojmë për punët që duhen.",
+      st3t: "Punimet", st3d: "Riparim i kujdesshëm nga mekanikët tanë të kualifikuar.",
+      st4t: "Dorëzimi", st4d: "Kontroll përfundimtar, dhe mjeti ju kthehet në gjendje të përsosur.",
       lg1: "Alpet: Zvicra, ku punojmë.", lg2: "Gjashtë yje: Kosova, prej nga vjen familja.", lg3: "Kryqi i kuq: precizioni zviceran.",
       hsKicker: "Historia jonë", hsTitle: "Dy vende, një standard.",
-      hsBody: "Garage Ahmeti Mécanique është biznes familjar. Rrënjët tona janë në Kosovë, punëtoria jonë është në Zvicër. Punojmë me rreptësinë zvicerane dhe mikpritjen e shtëpisë: marrim kohë për t'ju shpjeguar, dhe çdo veturë e trajtojmë si të ishte e jona.",
+      hsBody: "Garage Ahmeti Mécanique SARL është garazh familjar në Bex. Rrënjët tona janë në Kosovë, punëtoria jonë është në Zvicër. Punojmë me rreptësinë zvicerane dhe mikpritjen e shtëpisë, dhe çdo mjet e trajtojmë si të ishte i yni.",
       hsQuote: "“Një veturë e mirëmbajtur do të thotë një familje që kthehet shëndoshë në shtëpi.”",
-      ctKicker: "Kontakt", ctTitle: "Rezervoni një termin.", ctPhone: "Telefoni", ctAddr: "Adresa", ctHours: "Orari", ctLang: "Gjuhët",
+      ctKicker: "Kontakt", ctTitle: "Na kontaktoni.", ctPhone: "Telefoni", ctAddr: "Adresa", ctHours: "Orari", ctLang: "Gjuhët",
       h1d: "Hën – Pre", h2d: "E shtunë me termin", copy: "Kopjo",
       fTitle: "Kërkesë për termin", fName: "Emri", fTel: "Telefoni", fCar: "Vetura (marka, modeli)", fCarPh: "p.sh. VW Golf 2019", fDate: "Data e dëshiruar",
       fSvc: "Shërbimi", fOther: "Tjetër", fMsg: "Mesazhi", fMsgPh: "Përshkruani problemin me pak fjalë.",
       fErr: "Ju lutem shkruani emrin dhe numrin e telefonit.", fSend: "Përgatit kërkesën", fWa: "Dërgo me WhatsApp", fCopy: "Kopjo mesazhin",
-      sumHead: "Kërkesë për termin", sumName: "Emri", sumTel: "Telefoni", sumCar: "Vetura", sumDate: "Data", sumSvc: "Shërbimi", sumMsg: "Mesazhi", copied: "U kopjua"
+      sumHead: "Kërkesë për termin", sumName: "Emri", sumTel: "Telefoni", sumCar: "Vetura", sumDate: "Data", sumSvc: "Shërbimi", sumMsg: "Mesazhi", copied: "U kopjua",
+      ctMail: "E-mail",
+      ctAccess: "Qasja",
+      accessTxt: "Parking privat · me veturë, autobus ose tren",
+      route: "Udhëzime",
+      d1: "E hënë",
+      d2: "E martë",
+      d3: "E mërkurë",
+      d4: "E enjte",
+      d5: "E premte",
+      d6: "E shtunë",
+      d0: "E diel",
+      closed: "Mbyllur"
     },
     fr: { sumHead: "Demande de rendez-vous", sumName: "Nom", sumTel: "Téléphone", sumCar: "Voiture", sumDate: "Date", sumSvc: "Service", sumMsg: "Message", copied: "Copié" }
   };
@@ -581,6 +624,9 @@ footer small { color: var(--muted); font-size: 14px; letter-spacing: 0.08em; }
   document.querySelectorAll("[data-copy]").forEach(function (b) {
     b.addEventListener("click", function () { copyText(document.getElementById(b.dataset.copy).textContent, b); });
   });
+
+  var today = document.querySelector('.hours-t tr[data-day="' + new Date().getDay() + '"]');
+  if (today) today.classList.add("today");
 
   document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
   var saved = null;
